@@ -301,15 +301,6 @@ bool QMaemo5HomescreenAdaptor::applicationEventFilter(void *message, long *resul
     } else if (ev->type == ButtonRelease) {
         lastMouseWidget = 0;
 
-    } else if (ev->type == LeaveNotify) {
-        if (lastMouseWidget) {
-            // create a mouse up event that lies in Nirvana.
-            QPoint pos(-1000, -1000);
-            QMouseEvent e(QEvent::MouseButtonRelease, pos, pos, Qt::LeftButton, Qt::NoButton, Qt::NoModifier);
-            qt_sendSpontaneousEvent(lastMouseWidget, &e);
-            lastMouseWidget = 0;
-       }
-
     } else if (ev->type == ClientMessage) {
         XClientMessageEvent *cm = (XClientMessageEvent *)message;
         if (cm->message_type == hsAtoms[HildonAppletShowSettings]) {
