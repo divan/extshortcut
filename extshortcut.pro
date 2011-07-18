@@ -32,8 +32,8 @@ FORMS += \
     optionsdialog.ui \
     appselector.ui
 
-#maemo5:contains( DEFINES, Q_WS_MAEMO_5):
-#include(./qmaemo5homescreenadaptor/qmaemo5homescreenadaptor.pri)
+maemo5:contains(DEFINES, Q_WS_MAEMO_5):
+include(./qmaemo5homescreenadaptor/qmaemo5homescreenadaptor.pri)
 
 # Please do not modify the following two lines. Required for deployment.
 include(deployment.pri)
