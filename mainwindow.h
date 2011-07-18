@@ -33,7 +33,7 @@ public:
     }
 
 protected:
-    void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
     void moveEvent(QMoveEvent *event);
     void closeEvent(QCloseEvent *event);
 

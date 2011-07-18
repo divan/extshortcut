@@ -99,7 +99,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
     event->accept();
 }
 
-void MainWindow::mousePressEvent(QMouseEvent *event)
+void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 {
     if (_commandType == SC_TYPE_APPLICATION)
         launchApplication();
