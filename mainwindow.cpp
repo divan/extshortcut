@@ -101,6 +101,8 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
 void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 {
+    if (_command.isEmpty()) // unconfigured
+        showSettingsDialog();
     if (_commandType == SC_TYPE_APPLICATION)
         launchApplication();
     else
