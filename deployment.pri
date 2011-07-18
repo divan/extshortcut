@@ -46,7 +46,7 @@ symbian {
 } else:unix {
     maemo5 {
         installPrefix = /opt/usr
-        desktopfile.path = /usr/share/applications/hildon
+        desktopfile.path = /usr/share/applications/hildon-home
     } else {
         installPrefix = /usr/local
         desktopfile.path = /usr/share/applications
